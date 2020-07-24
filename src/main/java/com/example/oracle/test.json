@@ -1,0 +1,11 @@
+{
+  "schema": "xe",
+  "aggregateProvider": true,
+  "password": "oracle",
+  "driver": "oracle.jdbc.OracleDriver",
+  "pooled": true,
+  "port": 49161,
+  "jdbcurl": "jdbc:oracle:thin:@127.0.0.1:49161:xe",
+  "host": "localhost",
+  "username": "system"
+}

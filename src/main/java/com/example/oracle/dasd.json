@@ -1,0 +1,35 @@
+{
+  "aggregate": true,
+  "instance_id": "439",
+  "dataset_id": "406e1d41-c7f9-11ea-af8c-ecf4bbc4ecdc",
+  "dimensions": [
+    {
+      "dataset_id": "406e1d41-c7f9-11ea-af8c-ecf4bbc4ecdc",
+      "id": "b031f169-3eaa-4d87-8eaa-7eeaded03cdf",
+      "name": "NAME",
+      "column": "NAME",
+      "alias": "NAME",
+      "text": "NAME",
+      "original_role": "DIMENSION",
+      "type": "string"
+    }
+  ],
+  "measures": [
+    {
+      "dataset_id": "406e1d41-c7f9-11ea-af8c-ecf4bbc4ecdc",
+      "id": "7502ee66-abc1-4980-9272-63357355fb18",
+      "name": "ID",
+      "column": "ID",
+      "alias": "ID",
+      "text": "ID",
+      "aggregate_type": "sum",
+      "original_role": "DIMENSION",
+      "type": "string"
+    }
+  ],
+  "filter": {},
+  "limit": {
+    "pageSize": 500,
+    "pageNum": 0
+  }
+}
