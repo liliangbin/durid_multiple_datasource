@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      mysql:
+        username: llb
+        password: 123456
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://forcebing.top:3306/liliangbin?characterEncoding=utf-8
+        initialSize: 3
+        minIdle: 5
+        maxActive: 20
+      sqlserver:
+        username: sa
+        password: Abc!@#123456
+        driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        url: jdbc:sqlserver://localhost:1433;DatabaseName=test
+        initialSize: 3
+        minIdle: 5
+        maxActive: 20
+      clickhouse:
+        username: default
+        password: 123456
+        driver-class-name: ru.yandex.clickhouse.ClickHouseDriver
+        url: jdbc:clickhouse://192.168.217.62:8123/datasets
+        initialSize: 3
+        minIdle: 5
+        maxActive: 20
+
+server:
+  port: 8083
