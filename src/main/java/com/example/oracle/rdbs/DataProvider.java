@@ -28,6 +28,7 @@ public class DataProvider {
                 ps.setString(2,i+"name");
                 ps.setInt(3,i+23);
                 ps.executeUpdate();
+                System.out.println("done f");
     /*            System.out.println(sq);
                 int result = stmt.executeUpdate(sq);
                 System.out.println(result);*/
@@ -45,7 +46,7 @@ public class DataProvider {
 
     public static void main(String[] args) {
         DataProvider dataProvider = new DataProvider();
-//        dataProvider.update();
+     dataProvider.update();
         String test = null;
 
     }

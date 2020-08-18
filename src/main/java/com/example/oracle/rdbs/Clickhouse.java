@@ -10,13 +10,21 @@ import java.util.regex.Pattern;
 public class Clickhouse {
     public static final String CLICKHOUSE_URL_PATTERN = "jdbc:([^:]*)://([^:]+):([0-9]+)/([^?]+)?.*";
 
-    public static Connection getConnection() throws Exception {
+    public static Connection getConnection() throws ClassNotFoundException {
         String address = "jdbc:clickhouse://192.168.217.62:8123/datasets";
         Connection connection = null;
         String username = "default";
         String passw = "123456";
         Class.forName("ru.yandex.clickhouse.ClickHouseDriver");
-        connection = DriverManager.getConnection(address, username, passw);
+        long a =234;
+        System.out.println();
+      try {
+          connection = DriverManager.getConnection(address, username, passw);
+
+      }catch (SQLException e){
+          String message = e.getMessage();
+          e.printStackTrace();
+      }
         return connection;
     }
 
@@ -24,16 +32,16 @@ public class Clickhouse {
 
 
         Connection connection = getConnection();
-/*        for (int i = 0; i < 1090; i++) {
+        for (int i = 6; i < 1090; i++) {
             String sql = "insert into liliangbin  values(?,?,?)";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setInt(1, i);
             ps.setString(2, i + "name");
             ps.setInt(3, i);
             ps.executeUpdate();
-        }*/
+        }
 
-        getColumn(connection);
+//        getColumn(connection);
     }
 
     public static void getColumn(Connection connection) throws Exception {
