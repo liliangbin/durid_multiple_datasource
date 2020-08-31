@@ -21,11 +21,12 @@ public class Mysql {
             connection = DriverManager.getConnection(con, props);
             System.out.println(connection.getSchema());
             for (int i = 1080; i < 1090; i++) {
-                String sql = "insert into liliangbin  values(?,?,?)";
+                String sql = "insert into liliangbin  values(?,?,?,?)";
                 PreparedStatement ps = connection.prepareStatement(sql);
                 ps.setInt(1, i);
                 ps.setString(2, i + "name");
-                ps.setInt(3, i + 234);
+                ps.setDouble(3, 2.67);
+                ps.setInt(4,0);
                 ps.executeUpdate();
             }
             connection.close();
